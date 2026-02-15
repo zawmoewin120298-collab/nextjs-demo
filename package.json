@@ -1,31 +1,20 @@
 {
-  "name": "nextjs-demo",
-  "version": "0.1.0",
-  "private": true,
-  "engines": {
-    "node": "^22.0.0"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@tailwindcss/postcss": "^4.1.1",
-    "next": "^15.5.7",
-    "react": "^19",
-    "react-dom": "^19"
-  },
-  "devDependencies": {
-    "@types/node": "^22",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "postcss": "^8",
-    "tailwindcss": "^4.1.1",
-    "typescript": "^5"
-  },
-  "volta": {
-    "node": "22.14.0"
-  }
+  "inbounds": [{
+    "port": 8080,
+    "protocol": "vless",
+    "settings": {
+      "clients": [{"id": "05b8c783-7f59-47f9-9923-06a465679f6a"}],
+      "decryption": "none"
+    },
+    "streamSettings": {
+      "network": "ws",
+      "wsSettings": {
+        "path": "/getWorkerUpdates"
+      }
+    }
+  }],
+  "outbounds": [{
+    "protocol": "freedom",
+    "settings": {}
+  }]
 }
